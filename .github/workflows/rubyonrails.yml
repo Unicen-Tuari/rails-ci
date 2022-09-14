@@ -50,6 +50,6 @@ jobs:
         with:
           bundler-cache: true
       - name: Security audit dependencies
-        run: bundler-audit --update
+        # run: bundler-audit --update
       - name: Lint Ruby files
         run: bundle exec rubocop
