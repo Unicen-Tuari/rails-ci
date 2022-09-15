@@ -1,6 +1,9 @@
-Style/Documentation:
-  Enabled: false
+require:
+ - rubocop-rails
 AllCops:
-  NewCops: enable
+  NewCops: disable
   Exclude:
     - 'bin/*'
+
+Style/Documentation:
+  Enabled: false
