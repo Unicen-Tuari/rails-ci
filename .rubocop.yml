@@ -4,6 +4,7 @@ AllCops:
   NewCops: disable
   Exclude:
     - 'bin/*'
+    - vendor/bundle/**/*
 
 Style/Documentation:
   Enabled: false
