@@ -49,7 +49,9 @@ jobs:
         uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
         with:
           bundler-cache: true
-      # - name: Security audit dependencies
-      #   run: bundler-audit --update
       - name: Lint Ruby files
         run: bundle exec rubocop
+      - name: 'Bundler Audit'
+        uses: andrewmcodes/bundler-audit-action@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
