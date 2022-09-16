@@ -23,6 +23,12 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to post_url(Post.last)
   end
 
+  test "should fail creating post without title" do
+    post posts_url, params: { post: { body: @post.body, published: @post.published} }
+
+    assert_equal response.status, Rack::Utils.status_code(:unprocessable_entity)
+  end
+
   test "should show post" do
     get post_url(@post)
     assert_response :success
