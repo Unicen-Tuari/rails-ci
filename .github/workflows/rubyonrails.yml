@@ -39,6 +39,8 @@ jobs:
       # Add or replace test runners here
       - name: Run tests
         run: bin/rake
+      - name: Codecov
+        uses: codecov/codecov-action@v3.1.0
 
 #  lint:
 #    runs-on: ubuntu-latest
