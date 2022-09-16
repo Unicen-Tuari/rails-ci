@@ -40,8 +40,7 @@ jobs:
       # Add or replace test runners here
       - name: Run tests
         run: bin/rake
-
- lint:
+  lint:
    runs-on: ubuntu-latest
    steps:
      - name: Checkout code
